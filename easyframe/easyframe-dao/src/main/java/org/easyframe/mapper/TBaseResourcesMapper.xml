@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="tBaseResourcesMapper">
+	<resultMap type="org.easyframe.domain.permission.TBaseResources" id="tBaseResources">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="pid" property="pid" jdbcType="BIGINT"/>
+		<result column="resname" property="resname" jdbcType="VARCHAR"/>
+		<result column="resoverview" property="resoverview" jdbcType="VARCHAR"/>
+		<result column="resmark" property="resmark" jdbcType="VARCHAR"/>
+		<result column="resurl" property="resurl" jdbcType="VARCHAR"/>
+		<result column="resvalid" property="resvalid" jdbcType="VARCHAR"/>
+		<result column="reslvl" property="reslvl" jdbcType="VARCHAR"/>
+		<result column="createdate" property="createdate" jdbcType="TIMESTAMP"/>
+	</resultMap>
+	<select id="getList" resultMap="tBaseResources">
+		select id,resname
+		from t_base_resources
+		limit 10
+	</select>
+
+</mapper>

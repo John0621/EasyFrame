@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="tBaseRoleMapper">
+	<resultMap type="org.easyframe.domain.permission.TBaseRole" id="tBaseRole">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="pid" property="pid" jdbcType="BIGINT"/>
+		<result column="rolename" property="rolename" jdbcType="VARCHAR"/>
+		<result column="roleverview" property="roleverview" jdbcType="VARCHAR"/>
+		<result column="rolemark" property="rolemark" jdbcType="VARCHAR"/>
+		<result column="rolelvl" property="rolelvl" jdbcType="VARCHAR"/>
+		<result column="rolevalid" property="rolevalid" jdbcType="VARCHAR"/>
+		<result column="createdate" property="createdate" jdbcType="TIMESTAMP"/>
+	</resultMap>
+	<select id="getList" resultMap="tBaseRole">
+		select id,rolename
+		from t_base_role
+		limit 10
+	</select>
+
+</mapper>
