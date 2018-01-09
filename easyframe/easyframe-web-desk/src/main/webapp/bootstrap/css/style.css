@@ -1,0 +1,30 @@
+body {
+  color: #5a5a5a;
+}
+.container{
+    padding: 42px;
+    padding-bottom: 140px;
+}
+/* set the tab content's overflow to visible, make the animation transition no be cut */
+.tab-content {
+  overflow: visible;
+}
+.nav-tabs li a:focus{
+  outline: none;
+}
+.popover-example {
+  text-align: center;
+  margin: 0 0 10px;
+  list-style: none;
+}
+.popover-example li{
+  display: inline-block;
+  margin: 4px;
+  padding: 0px;
+}
+.btn:focus{
+  outline: none;
+}
+.modExample .btn{
+    margin: 4px 8px 4px 0;
+}
